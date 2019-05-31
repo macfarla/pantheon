@@ -59,20 +59,20 @@ public class AccountLocalConfigPermissioningControllerTest {
 
     when(metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count",
-            "Number of times the transaction local permissioning provider has been checked"))
+            "account_local_check_count",
+            "Number of times the account local permissioning provider has been checked"))
         .thenReturn(checkCounter);
 
     when(metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count_permitted",
-            "Number of times the transaction local permissioning provider has been checked and returned permitted"))
+            "account_local_check_count_permitted",
+            "Number of times the account local permissioning provider has been checked and returned permitted"))
         .thenReturn(checkPermittedCounter);
 
     when(metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count_unpermitted",
-            "Number of times the transaction local permissioning provider has been checked and returned unpermitted"))
+            "account_local_check_count_unpermitted",
+            "Number of times the account local permissioning provider has been checked and returned unpermitted"))
         .thenReturn(checkUnpermittedCounter);
 
     controller =
