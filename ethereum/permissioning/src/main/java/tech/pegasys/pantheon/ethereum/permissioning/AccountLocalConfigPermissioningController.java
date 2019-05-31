@@ -62,18 +62,18 @@ public class AccountLocalConfigPermissioningController implements TransactionPer
     this.checkCounter =
         metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count",
-            "Number of times the transaction local permissioning provider has been checked");
+            "account_local_check_count",
+            "Number of times the account local permissioning provider has been checked");
     this.checkCounterPermitted =
         metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count_permitted",
-            "Number of times the transaction local permissioning provider has been checked and returned permitted");
+            "account_local_check_count_permitted",
+            "Number of times the account local permissioning provider has been checked and returned permitted");
     this.checkCounterUnpermitted =
         metricsSystem.createCounter(
             MetricCategory.PERMISSIONING,
-            "transaction_local_check_count_unpermitted",
-            "Number of times the transaction local permissioning provider has been checked and returned unpermitted");
+            "account_local_check_count_unpermitted",
+            "Number of times the account local permissioning provider has been checked and returned unpermitted");
   }
 
   private void readAccountsFromConfig(final LocalPermissioningConfiguration configuration) {
